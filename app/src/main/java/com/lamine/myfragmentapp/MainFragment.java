@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements View.OnClickListener{
 
     public MainFragment () {
         // Required empty public constructor
@@ -24,5 +24,11 @@ public class MainFragment extends Fragment {
                               Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate (R.layout.fragment_main, container, false);
+    }
+
+
+    @Override
+    public void onClick (View v) {
+
     }
 }
