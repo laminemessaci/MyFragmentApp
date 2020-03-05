@@ -43,4 +43,14 @@ public class MainFragment extends Fragment implements View.OnClickListener{
     public void onClick (View v) {
 
     }
+
+    // 3 - Create callback to parent activity
+    private void createCallbackToParentActivity(){
+        try {
+            //Parent activity will automatically subscribe to callback
+            mCallback = (OnButtonClickedListener) getActivity();
+        } catch (ClassCastException e) {
+            throw new ClassCastException(e.toString()+ " must implement OnButtonClickedListener");
+        }
+    }
 }
