@@ -16,7 +16,6 @@
         android:background="#fb12ad"
         android:padding="12dp"
 
-        android:shadowRadius="10dp"
         android:textColor="#FFF"
         android:textSize="30sp"/>
 
