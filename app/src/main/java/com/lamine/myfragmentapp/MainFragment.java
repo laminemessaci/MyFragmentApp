@@ -14,6 +14,14 @@ import android.view.ViewGroup;
  */
 public class MainFragment extends Fragment implements View.OnClickListener{
 
+    //2 - Declare callback
+    private OnButtonClickedListener mCallback;
+
+    // 1 - Declare our interface that will be implemented by any container activity
+    public interface OnButtonClickedListener {
+        public void onButtonClicked(View view);
+    }
+
     public MainFragment () {
         // Required empty public constructor
     }
@@ -22,9 +30,12 @@ public class MainFragment extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState) {
-       View result = inflater.inflate (R.layout.fragment_main, container, false);
-       result.findViewById (R.id.fragment_main_button).setOnClickListener (this);
-       return result;
+        //Inflate the layout of MainFragment
+        View result=inflater.inflate(R.layout.fragment_main, container, false);
+        //Set onClickListener to button "SHOW ME DETAILS"
+        result.findViewById(R.id.fragment_main_button).setOnClickListener(this);
+
+        return result;
     }
 
 
